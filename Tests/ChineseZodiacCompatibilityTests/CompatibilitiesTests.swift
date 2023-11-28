@@ -25,14 +25,14 @@ final class CompatibilitiesTests: XCTestCase {
         XCTAssertTrue(sut.contains(.Monkey))
     }
     
-    func test_whenAnimalIsOx_compatibilitiesContain_Rat_Rooster_Snake() throws {
+    func test_oxIsCompatibleWith_Rat_Rooster_Snake() throws {
         let sut = Compatibilities.of(animal: .Ox)
         XCTAssertTrue(sut.contains(.Rat))
         XCTAssertTrue(sut.contains(.Rooster))
         XCTAssertTrue(sut.contains(.Snake))
     }
     
-    func test_whenAnimalIsTiger_compatibilitiesContain_Horse_Dog_Pig() throws {
+    func test_tigerIsCompatibleWith_Horse_Dog_Pig() throws {
         let sut = Compatibilities.of(animal: .Tiger)
         XCTAssertTrue(sut.contains(.Horse))
         XCTAssertTrue(sut.contains(.Dog))
