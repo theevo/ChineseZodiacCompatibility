@@ -18,12 +18,12 @@ public struct Compatibilities {
             return [.Rat, .Rooster, .Snake]
         case .Tiger:
             return [.Dog, .Horse, .Pig]
+        case .Rabbit:
+            return [.Dog, .Goat, .Pig]
+        case .Dragon:
+            return [.Rat, .Monkey, .Rooster]
             
             // NOT CORRECT
-        case .Rabbit:
-            return [.Dog, .Goat, .Tiger]
-        case .Dragon:
-            return [.Goat, .Rabbit, .Horse, .Pig]
         case .Snake:
             return [.Dog, .Goat, .Tiger]
         case .Goat:
