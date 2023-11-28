@@ -10,8 +10,6 @@ import Foundation
 public struct Compatibilities {
     public static func of(animal: Animal) -> [Animal] {
         switch animal {
-            
-            // correct
         case .Rat:
             return [.Rat, .Ox, .Dragon, .Monkey]
         case .Ox:
@@ -30,14 +28,12 @@ public struct Compatibilities {
             return [.Goat, .Rabbit, .Horse, .Pig]
         case .Monkey:
             return [.Rat, .Dragon, .Dog]
-            
-            // NOT CORRECT
         case .Rooster:
-            return [.Dog, .Goat, .Tiger]
+            return [.Ox, .Dragon, .Snake]
         case .Dog:
-            return [.Goat, .Rabbit, .Horse, .Pig]
+            return [.Rabbit, .Tiger, .Horse, .Monkey]
         case .Pig:
-            return [.Dog, .Goat, .Tiger]
+            return [.Rabbit, .Tiger, .Goat]
         }
     }
 }
