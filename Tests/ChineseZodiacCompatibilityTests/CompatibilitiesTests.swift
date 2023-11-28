@@ -2,21 +2,6 @@ import XCTest
 import ChineseZodiacCompatibility
 
 final class CompatibilitiesTests: XCTestCase {
-    func test_horseIsCompatibleWith_Goat_Dog_Tiger() {
-        let sut = Compatibilities.of(animal: .Horse)
-        XCTAssertTrue(sut.contains(.Dog))
-        XCTAssertTrue(sut.contains(.Goat))
-        XCTAssertTrue(sut.contains(.Tiger))
-    }
-    
-    func test_goatIsCompatibleWith_Goat_Rabbit_Horse_Pig() throws {
-        let sut = Compatibilities.of(animal: .Goat)
-        XCTAssertTrue(sut.contains(.Goat))
-        XCTAssertTrue(sut.contains(.Rabbit))
-        XCTAssertTrue(sut.contains(.Horse))
-        XCTAssertTrue(sut.contains(.Pig))
-    }
-    
     func test_ratIsCompatibleWith_Rat_Ox_Dragon_Monkey() throws {
         let sut = Compatibilities.of(animal: .Rat)
         XCTAssertTrue(sut.contains(.Rat))
@@ -57,6 +42,21 @@ final class CompatibilitiesTests: XCTestCase {
         let sut = Compatibilities.of(animal: .Snake)
         XCTAssertTrue(sut.contains(.Ox))
         XCTAssertTrue(sut.contains(.Rooster))
+    }
+    
+    func test_horseIsCompatibleWith_Goat_Dog_Tiger() {
+        let sut = Compatibilities.of(animal: .Horse)
+        XCTAssertTrue(sut.contains(.Dog))
+        XCTAssertTrue(sut.contains(.Goat))
+        XCTAssertTrue(sut.contains(.Tiger))
+    }
+    
+    func test_goatIsCompatibleWith_Goat_Rabbit_Horse_Pig() throws {
+        let sut = Compatibilities.of(animal: .Goat)
+        XCTAssertTrue(sut.contains(.Goat))
+        XCTAssertTrue(sut.contains(.Rabbit))
+        XCTAssertTrue(sut.contains(.Horse))
+        XCTAssertTrue(sut.contains(.Pig))
     }
     
     func test_monkeyIsCompatibleWith_Rat_Dragon_Dog() throws {
